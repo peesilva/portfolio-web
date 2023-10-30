@@ -534,4 +534,24 @@ transition: .4s;
 .teste{
     display: block;
 }
+.certificados h2 {
+    padding: 40px;
+}
+
+.flexs {
+    flex-direction: column; /* Alterar a direção do flex container para coluna */
+    align-items: center; /* Centralizar os itens no eixo transversal (vertical) */
+}
+
+.img-ports {
+    min-height: 215px; /* Reduzir a altura mínima */
+    width: 175px; /* Reduzir a largura */
+    padding: 10px; /* Reduzir o preenchimento */
+    margin: 10px auto;
+}
+
+section.certificados.flexs {
+    justify-content: center; /* Centralizar os itens horizontalmente */
+    margin-top: 30px; /* Reduzir a margem superior */
+}
 }
