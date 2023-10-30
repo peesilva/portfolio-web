@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--google font-->
+    <!--icones-bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--icones fim-->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="menu.js" defer></script>
+
+    <title>Pedro Silva Dev</title>
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo" id="inicio">
+                <a href="#inicio"> 
+                    <img src="images/logo-green.png" alt="meu logo">
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#certificados">certificados</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+            <a href="#formulario">
+                <button>Contato</button>
+            </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div><!--btn-abrir-menu-->
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div><!--btn-fechar-->
+
+                <nav>
+                    <ul><div class="teste">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#certificados">certificados</a></li>
+                        <li><a href="#formulario">Contato</a></li>
+                    </div><!--teste-->
+                </ul>
+                </nav>
+
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+        </div><!--interface-->
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                <div class="txt-topo-site">
+
+                
+                <h1>Este portfólio parece ser de um dev frontend, mas não, sou dev backend<span>;)</span></h1>
+                <p>Seja bem vindo ao meu portfólio web, conheca um pouquinho sobre mim...</p>
+
+                    <div class="btn-contato">
+                        <a href="#formulario">
+                            <button>Entre em contato</button>
+                        </a>
+                    </div>
+                </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+                        <img src="images/eu.png" alt="eu"/>
+
+                    </div><!--img-topo-site-->>
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <section class="especialidades" id="especialidades">
+            <div class="interface">
+                <h2 class="titulo"> Minhas <span>Especialidades</span></h2>
+            <div class="flex">
+                <div class="especialidades-box">
+                    <i class="bi bi-code"></i>
+                    <h3>Java</h3>
+                    <p>Desenvolvimento Java Spring Conhecimento sólido no desenvolvimento de APIs SOAP e REST</p>
+                </div><!--especialidades-box-->
+                <div class="especialidades-box">
+                    <i class="bi bi-cloud"></i>
+                    <h3>Cloud</h3>
+                    <p>Conhecimento técnico e prático com serviços AWS, entre eles, EC2, Route 53, S3, Elastic Beanstalk, SES...</p>
+                </div><!--especialidades-box-->
+                <div class="especialidades-box">
+                    <i class="bi bi-git"></i>
+                    <h3>Versionamento</h3>
+                    <p>Versionamento de código usando Git</p>
+                </div><!--especialidades-box-->
+            </div><!--interface-->
+        </div><!--flex-->
+        </section><!--fim-especialidades-->
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="images/eu.png" alt="eu"/>
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <h2>Hello, World! <span>I'm Pedro Silva</span></h2>
+                        <p>Olá, mundo! Meu nome é Pedro Silva, tenho 19 anos e curso Sistemas de Informação na Unimetrocamp</p>
+                        <p>textao</p>
+                        <div class="btn-social">
+                            <a href="mailto:pedrosilva.profissional.ti@gmail.com"><button id="emailBtn"><i class="bi bi-envelope"></i></button></a>
+                            <a href="https://www.linkedin.com/in/pedro-augusto-pereira-borges-da-silva-05a57722b/"><button id="linkedinBtn"><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/peesilva"><button id="githubBtn"><i class="bi bi-github"></i></button></a>
+                        </div><!--btn-social-->
+                    </div><!--txt-sobre-->
+
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+            
+        <section class="projetos" id="projetos">
+            <div class="interface">
+                <h2 class="titulo">Meus <span>Projetos</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(images/crud.png);">
+                        <div class="overlay">API de Produtos</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/estoque.png);">
+                        <div class="overlay">Estoque de veículos</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/projeto3.png);">
+                        <div class="overlay">Portfólio Web responsivo</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--projetos-->
+
+        <section class="certificados" id="certificados">
+                <h2 class="titulo">Minhas <span>Certificações</span></h2>
+                <div class="flexs">
+                    <div class="img-ports" style="background-image: url(images/apim.png);">
+                        <div class="names"></div>
+                    </div>
+                    <div class="img-ports" style="background-image: url(images/ei.png);">
+                        <div class="names"></div>
+                    </div>
+                    <div class="img-ports" style="background-image: url(images/is.png);">
+                        <div class="names"></div>
+                    </div>
+                    <div class="img-ports" style="background-image: url(images/choreo.png);">
+                        <div class="names"></div>
+                    </div>
+                </div><!--flex-->
+        </section><!--certificados-->  
+
+        <section class="formulario" id="formulario">
+            <div class="interface">
+                <h2 class="titulo">Fale <span>Comigo</span></h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome:" required/>
+                    <input type="text" name="" id="" placeholder="Seu email:" required/>
+                    <input type="text" name="" id="" placeholder="Seu celular:"/>
+                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="Enviar"></div><!--btn enviar-->
+                    
+                </form>
+
+            </div><!--interface-->
+
+        </section><!--formulario-->
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="images/logo-green.png" alt="Pedro Silva Dev">
+                    </div><!--logo-footer-->
+                    <div class="btn-social">
+                        <a href="mailto:pedrosilva.profissional.ti@gmail.com"><button id="emailBtn"><i class="bi bi-envelope"></i></button></a>
+                        <a href="https://www.linkedin.com/in/pedro-augusto-pereira-borges-da-silva-05a57722b/"><button id="linkedinBtn"><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://github.com/peesilva"><button id="githubBtn"><i class="bi bi-github"></i></button></a>
+                    </div><!--btn-social-->
+                </div><!--flex-->
+            </div><!--line-footer-->
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i><a href="mailto:pedrosilva.profissional.ti@gmail.com">pedrosilva.profissional.ti@gmail.com</a></p>
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+</body>
+</html>
