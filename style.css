@@ -1,8 +1,12 @@
 /*tela de certificacoes*/
 .certificados h2{
-    padding: 40px;
+    padding: 60px;
 }
 
+section.certificados{
+    padding: 80px 20%; /*20% eh o espaco de um certificado pro outro lateral*/
+
+}
 .flexs {
     display: flex;
     padding-bottom: 10;
@@ -246,7 +250,7 @@ section.sobre .flex {
 /*Estilo do projetos*/
 
 section.projetos {
-    padding: 70px 4%;
+    padding: 80px 4%;
     box-shadow: 0 0 30px 8px #ffffff03;
 }
 
@@ -553,5 +557,13 @@ transition: .4s;
 section.certificados.flexs {
     justify-content: center; /* Centralizar os itens horizontalmente */
     margin-top: 30px; /* Reduzir a margem superior */
+}
+
+
+section.certificados{
+    padding: 40px;
+}
+.certificados h2{
+    padding: 40px;
 }
 }
