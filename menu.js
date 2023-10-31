@@ -55,3 +55,16 @@ document.getElementById("linkedinBtn").addEventListener("click", function() {
 document.getElementById("githubBtn").addEventListener("click", function() {
     window.location.href = "https://github.com/peesilva?tab=repositories";
 });
+
+const typed = new Typed('.multiple', {
+    strings: ['Seja bem vindo ao meu portfólio web, conheça um pouquinho sobre mim...'],
+    typeSpeed: 45,
+    backSpeed: 70,
+    backDelay: 56,
+    loop: false,
+    onComplete: function() {
+        setTimeout(function() {
+            document.querySelector('.typed-cursor').style.display = 'none'; // pra esconder o cursor
+        }, 1790); // 1.7s
+    }
+});
