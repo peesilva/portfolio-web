@@ -15,32 +15,32 @@ Overlay.addEventListener('click', ()=>{
 } )
 
 document.getElementById('projetos').addEventListener('click', function(event) {
-    event.preventDefault(); // Isso evita que o link seja seguido
+    event.preventDefault(); 
     
-    // Encontre o elemento da seção de destino
+
     const projetos = document.getElementById('projetos');
     
-    // Role a página até a seção de destino
+
     projetos.scrollIntoView({ behavior: 'smooth' });
 });
 
 document.getElementById('formulario').addEventListener('click', function(event) {
-    event.preventDefault(); // Isso evita que o link seja seguido
+    event.preventDefault(); 
     
-    // Encontre o elemento da seção de destino
+ 
     const formulario = document.getElementById('formulario');
     
-    // Role a página até a seção de destino
+
     formulario.scrollIntoView({ behavior: 'smooth' });
 });
 
 document.getElementById('sobre').addEventListener('click', function(event) {
-    event.preventDefault(); // Isso evita que o link seja seguido
+    event.preventDefault(); 
     
-    // Encontre o elemento da seção de destino
+
     const sobre = document.getElementById('sobre');
     
-    // Role a página até a seção de destino
+   
     sobre.scrollIntoView({ behavior: 'smooth' });
 });
 
@@ -53,5 +53,5 @@ document.getElementById("linkedinBtn").addEventListener("click", function() {
 });
 
 document.getElementById("githubBtn").addEventListener("click", function() {
-    window.location.href = "https://github.com/peesilva";
+    window.location.href = "https://github.com/peesilva?tab=repositories";
 });
