@@ -1,3 +1,82 @@
+/*botão de rolagem */
+.scroll-to-top {
+    position: fixed;
+    font-size: 800;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-to-top i {
+    font-size: 25px; /*tamanho do ícone*/
+}
+
+/*botao*/
+
+.toggle-language {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 30px; /* Remova margens */
+  }
+  
+
+.toggle-language .lingua{
+    color: #ffffff;
+    margin: -1px;
+    text-align: center;
+   
+}
+
+.toggle-language {
+    display: inline-block;
+  }
+  
+  .toggle-language input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle {
+    width: 60px;
+    height: 30px;
+    padding: 0px;
+    border-radius: 30px;
+    background-color: #00ff06;
+    transition: all 0.2s ease 0s;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+  
+  .toggle-ball {
+    width: 30px; /* Tamanho da bolinha */
+    height: 30px; /* Tamanho da bolinha */
+    background-color: #000000; /* Cor da bolinha */
+    border-radius: 50%; /* Forma arredondada da bolinha */
+    position: absolute;
+    transition: transform 0.3s; /* Efeito de transição suave ao mover a bolinha */
+    border: 2px solid rgb(245, 245, 239);
+    box-shadow: rgba(0, 0, 0, 0.41) 0px 1px 6px 1px;
+  }
+  
+  /* Estilize o botão de alternância para o idioma desejado */
+  #language-switch:checked + .toggle .toggle-ball {
+    transform: translateX(30px); /* Move a bolinha para a direita (ativado) */
+  }
+  
+  /* Estilize o botão de alternância para o idioma alternativo (invertido) */
+  #language-switch + .toggle .toggle-ball {
+    transform: translateX(0); /* Move a bolinha de volta para a esquerda (desativado) */
+  }
+
 /*tela de certificacoes*/
 .certificados h2{
     padding: 60px;
@@ -83,7 +162,8 @@ form .btn-enviar input:hover {
     transform: scale(1.02);
 }
 
-h2.titulo {
+/* Antes estava assim os titulos sem traducao
+    h2.titulo {
     color: white;
     font-size: 28px;
     text-align: center;
@@ -93,6 +173,34 @@ h2.titulo span {
     color: #00ff06;
     font-size: 28px;
     text-align: center;
+}*/
+
+h2[data-traducao="meus"] ,
+h2[data-traducao="minhas1"] ,
+h2[data-traducao="especialidades1"] ,
+h2[data-traducao="minhas2"] ,
+h2[data-traducao="certificacoes1"] ,
+h2[data-traducao="fale"] ,
+h2[data-traducao="comigo"] ,
+h2[data-traducao=projetos] {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
+
+h2[data-traducao="meus"] .meus span,
+h2[data-traducao="minhas1"] .minhas1 span,
+h2[data-traducao="especialidades1"] .especialidades1 span ,
+h2[data-traducao="minhas2"] .minhas2 span,
+h2[data-traducao="certificacoes"] .certificacoes span,
+h2[data-traducao="fale"] .fale span,
+h2[data-traducao="comigo"] .comigo span,
+h2[data-traducao="projetos"] .projetos span {
+    font-size: 28px;
+    color: #00ff06;
+    text-align: center;
+    line-height: 30px;
 }
 
 
