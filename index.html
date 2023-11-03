@@ -23,6 +23,11 @@
 <body>
 
     <header>
+
+        <div id="scroll-to-top" class="scroll-to-top">
+            <i class="bi bi-arrow-up"></i>
+        </div>
+    
         <div class="interface">
             <div class="logo" id="inicio">
                 <a href="#inicio"> 
@@ -32,19 +37,26 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#sobre">Sobre mim</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#certificados">certificados</a></li>
+                    <li><a data-traducao="inicio" href="#inicio"><span class="inicio">Inicio</span> </a></li>
+                    <li><a data-traducao="especialidades" href="#especialidades"><span class="especialidades">Especialidades</span></a></li>
+                    <li><a data-traducao="sobre" href="#sobre"><span class="sobre-mim">Sobre mim</span></a></li>
+                    <li><a data-traducao="projetos" href="#projetos"><span class="projects">Projetos</span></a></li>
+                    <li><a data-traducao="certificados" href="#certificados"><span class="certificados">Certificados</span></a></li>
                 </ul>
             </nav>
 
             <div class="btn-contato">
-            <a href="#formulario">
-                <button>Contato</button>
-            </a>
-            </div><!--btn-contato-->
+                <a href="#formulario">
+                    <button data-traducao="contato"><span class="contact">Contato</span></button>
+                </a>
+            </div>
+            <!--botao-change-lingua--><div class="toggle-language">
+                <input type="checkbox" id="language-switch">
+                <label for="language-switch" class="toggle">
+                  <div class="toggle-ball"></div>
+                </label>
+                <div class="lingua">BR-US</div>
+              </div><!--fim do botao de change lingua-->
 
             <div class="btn-abrir-menu" id="btn-menu">
                 <i class="bi bi-list"></i>
@@ -79,14 +91,17 @@
                 <div class="txt-topo-site">
 
                 
-                <h1>Este portfólio parece ser de um dev frontend, mas não, sou dev backend<span>;)</span></h1>
+                    <h1 data-traducao="bemVindo" class="translated-text">
+                    <span class="text-to-translate"></span>
+                    <span class="emoji">;)</span>
+                    </h1>
                 <p> <span class="multiple"></span></p><!--a mensagem daqui passou pro js-->
 
-                    <div class="btn-contato">
-                        <a href="#formulario">
-                            <button>Entre em contato</button>
-                        </a>
-                    </div>
+                <div class="btn-contato">
+                    <a href="#formulario">
+                        <button data-traducao="entreEmContato"><span class="entreEmContato">Entre em contato</span></button>
+                    </a>
+                </div>
                 </div><!--txt-topo-site-->
 
                     <div class="img-topo-site">
@@ -99,22 +114,22 @@
 
         <section class="especialidades" id="especialidades">
             <div class="interface">
-                <h2 class="titulo"> Minhas <span>Especialidades</span></h2>
+                <h2 data-traducao="minhas1"><span class="minhas1">Minhas</span><a data-traducao="especialidades1"><span class="especialidades1">Especialidades</span></a></h2>
             <div class="flex">
                 <div class="especialidades-box">
                     <i class="bi bi-code"></i>
                     <h3>Java</h3>
-                    <p>Desenvolvimento Java Spring Conhecimento sólido no desenvolvimento de APIs SOAP e REST</p>
+                    <p data-traducao="textjava"><span class="textjava"></span></p>
                 </div><!--especialidades-box-->
                 <div class="especialidades-box">
                     <i class="bi bi-cloud"></i>
                     <h3>Cloud</h3>
-                    <p>Conhecimento técnico e prático com serviços AWS, entre eles, EC2, Route 53, S3, Elastic Beanstalk, SES...</p>
+                    <p data-traducao="textcloud"><span class="textcloud"></span></p>
                 </div><!--especialidades-box-->
                 <div class="especialidades-box">
                     <i class="bi bi-git"></i>
-                    <h3>Versionamento</h3>
-                    <p>Versionamento de código usando Git</p>
+                    <h3 data-traducao="versionamento"><span class="versionamento"></span></h3>
+                    <p data-traducao="textver"><span class="textver"></span></p>
                 </div><!--especialidades-box-->
             </div><!--interface-->
         </div><!--flex-->
@@ -127,18 +142,10 @@
                     </div><!--img-sobre-->
 
                     <div class="txt-sobre">
-                        <h2>Hello, World! <span>I'm Pedro Silva</span></h2>
-                        <p>Olá, mundo! Meu nome é Pedro Silva, tenho 19 anos, sou formado em técnico de informática pelo Bento Quirino e estou cursando Sistemas de Informação na Unimetrocamp. Minhas habilidades em inglês (B2) e alemão (A1) contribuem positivamente para uma comunicação eficaz no mercado de trabalho. </p>
-                        <p>Comecei a estagiar na Digiage em maio de 2022. Durante esse período, aprendi os conceitos Linux, boas práticas de desenvolvimento, resolução de problemas, atendimento de chamados com o cliente e melhorei minha comunicação assertiva. Após 8 meses de muita dedicação, recebi uma proposta para iniciar como Analista de Sistemas Júnior.
-
-                            Durante 9 meses como Analista de Sistemas Júnior, conquistei 3 certificados WSO2, (ferramenta de gerenciamento e desenvolvimento de APIs). Desenvolvi scripts para automatizar funcionalidades de software, aprimorei minhas análises em incidentes e realizei algumas trocas de certificados SSL nos clientes.
-                            
-                            Nos meus momentos livres, busquei expandir meus conhecimentos de desenvolvimento de sistemas, apaixonado pelo desenvolvimento backend, aprofundei meus conhecimentos em Java e Spring.
-                            
-                            Em agosto de 2023, iniciei na Digiage como Desenvolvedor Backend Júnior, onde estou atuando diretamente no desenvolvimento de novas funcionalidades em sistemas já existentes. Estou buscando expandir meus horizontes, adquirindo experiência prática com os serviços da AWS.
-                            
-                            <p>Esse portfólio está hospedado em um S3 e o domínio associado a ele está registrado no Route 53, ambos serviços de cloud da AWS.</p>
-                        </p>
+                        <h2 data-traducao="sobreTitulo"><span class="hello"> Hello, World!</span> <a data-traducao="sobreTituloName"><span class="myname">I'm Pedro Silva</span></a></h2>
+                        <p data-traducao="paragrafo1"><span class="par1"></span></p>
+                        <p data-traducao="paragrafo2"><span class="par2"></span> </p>
+                            <p data-traducao="paragrafo3"><span class="par3"></span></p>                      
                         <div class="btn-social">
                             <a href="mailto:pedrosilva.profissional.ti@gmail.com"><button id="emailBtn"><i class="bi bi-envelope"></i></button></a>
                             <a href="https://www.linkedin.com/in/pedro-augusto-pereira-borges-da-silva-05a57722b/"><button id="linkedinBtn"><i class="bi bi-linkedin"></i></button></a>
@@ -152,7 +159,7 @@
             
         <section class="projetos" id="projetos">
             <div class="interface">
-                <h2 class="titulo">Meus <span>Projetos</span></h2>
+                <h2 data-traducao="meus"><span class="meus">Meus</span><a data-traducao="projetos"><span class="projetos">Projetos</span></a></h2>
                 <div class="flex">
                     <div class="img-port" style="background-image: url(images/crud.png);">
                         <div class="overlay">Crud Java usando banco h2</div>
@@ -168,7 +175,7 @@
         </section><!--projetos-->
 
         <section class="certificados" id="certificados">
-                <h2 class="titulo">Minhas <span>Certificações</span></h2>
+                <h2 data-traducao="minhas2"><span class="minhas2">Minhas</span><a data-traducao="certificacoes"><span class="certificacoes">Certificações</span></a></h2>
                 <div class="flexs">
                     <div class="img-ports" style="background-image: url(images/apim.png);">
                         <div class="names"></div>
@@ -187,8 +194,7 @@
 
         <section class="formulario" id="formulario">
             <div class="interface">
-                <h2 class="titulo">Fale <span>Comigo</span></h2>
-
+                <h2 data-traducao="fale"><span class="fale">Fale</span><a data-traducao="comigo"><span class="comigo">Comigo</span></a></h2>
                 <form action="">
                     <input type="text"  placeholder="Seu nome:" required/>
                     <input type="email"  placeholder="Seu email:" required/>
