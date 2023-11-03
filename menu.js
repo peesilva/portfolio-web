@@ -1,6 +1,7 @@
 let btnMenu = document.getElementById('btn-menu')
 let Menu = document.getElementById('menu-mobile')
 let Overlay = document.getElementById('overlay-menu')
+let typed;
 
 btnMenu.addEventListener('click', ()=>{
     Menu.classList.add('abrir-menu')
@@ -56,24 +57,16 @@ document.getElementById("githubBtn").addEventListener("click", function() {
     window.location.href = "https://github.com/peesilva?tab=repositories";
 });
 
-const typed = new Typed('.multiple', {
-    strings: ['Seja bem vindo ao meu portfólio web, conheça um pouquinho sobre mim...'],
-    typeSpeed: 45,
-    backSpeed: 70,
-    backDelay: 56,
-    loop: false,
-    onComplete: function() {
-        setTimeout(function() {
-            document.querySelector('.typed-cursor').style.display = 'none'; // pra esconder o cursor
-        }, 1790); // 1.7s
-    }
-});
 
 const textos = {
     'bemVindo': {
         'pt': 'Este portfólio parece ser de um dev frontend, mas não, sou dev backend',
         'en': 'This portfolio seems to be from a frontend developer, but no, I\'m a backend developer'
     },
+    'typing': {
+        'pt': 'Seja bem vindo ao meu portfólio web, conheca um pouquinho sobre mim...',
+        'en': 'Welcome to my web portfolio, get to know a little about me...'
+        },
     'inicio': {
         'pt': 'Início',
         'en': 'Home'
@@ -208,8 +201,24 @@ function alterarIdioma(idioma) {
         const textverElement = elemento.querySelector('.textver');
         const textcloudElement = elemento.querySelector('.textcloud');
         const textjavaElement = elemento.querySelector('.textjava');
+        const typedTranslate = textos['typing'][idioma];
 
+        if (typed) {
+            typed.destroy(); // Destrua a instância atual do Typed.js
+            }
 
+        typed = new Typed('.multiple', {
+            strings: [typedTranslate],
+            typeSpeed: 45,
+            backSpeed: 70,
+            backDelay: 56,
+            loop: false,
+            onComplete: function() {
+            setTimeout(function() {
+            document.querySelector('.typed-cursor').style.display = 'none'; // para esconder o cursor
+            }, 1790); // 1.7s
+            }
+            }); 
 
         //elemento.textContent = textos[chave][idioma];
            
