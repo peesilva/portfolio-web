@@ -163,6 +163,18 @@ const textos = {
         'pt': 'Desenvolvimento Java Spring Conhecimento sólido no desenvolvimento de APIs SOAP e REST',
         'en': 'Java Spring Development Solid knowledge in the development of SOAP and REST APIs'
     },
+    'overlay1': {
+        'pt': 'CRUD Java usando banco h2',
+        'en': 'Java CRUD using H2 database'
+    },
+    'overlay2': {
+        'pt': 'Estoque de veículos',
+        'en': 'Vehicle inventory'
+    },
+    'overlay3': {
+        'pt': ' Portfólio Web responsivo',
+        'en': 'Responsive Web Portfolio'
+    },
     // Adicione mais textos aqui
 };
 
@@ -202,6 +214,9 @@ function alterarIdioma(idioma) {
         const textcloudElement = elemento.querySelector('.textcloud');
         const textjavaElement = elemento.querySelector('.textjava');
         const typedTranslate = textos['typing'][idioma];
+        const overlay1Element = elemento.querySelector('.overlay1');
+        const overlay2Element = elemento.querySelector('.overlay2');
+        const overlay3Element = elemento.querySelector('.overlay3');
 
         if (typed) {
             typed.destroy(); // Destrua a instância atual do Typed.js
@@ -325,6 +340,18 @@ function alterarIdioma(idioma) {
         if (textjavaElement) {
             textjavaElement.style.color = '#ffff'; // Define a cor desejada para o texto
             textjavaElement.textContent = textoTraduzido;
+        } 
+        if (overlay1Element) {
+            overlay1Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            overlay1Element.textContent = textoTraduzido;
+        } 
+        if (overlay2Element) {
+            overlay2Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            overlay2Element.textContent = textoTraduzido;
+        } 
+        if (overlay3Element) {
+            overlay3Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            overlay3Element.textContent = textoTraduzido;
         } 
     });
 }
