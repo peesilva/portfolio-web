@@ -175,6 +175,18 @@ const textos = {
         'pt': ' Portfólio Web responsivo',
         'en': 'Responsive Web Portfolio'
     },
+    'meus2': {
+        'pt': 'Meus ',
+        'en': 'My '
+    },
+    'cursos': {
+        'pt': 'Cursos',
+        'en': 'Courses'
+    },
+    'cursos2': {
+        'pt': 'Cursos',
+        'en': 'Courses'
+    },
     // Adicione mais textos aqui
 };
 
@@ -217,6 +229,9 @@ function alterarIdioma(idioma) {
         const overlay1Element = elemento.querySelector('.overlay1');
         const overlay2Element = elemento.querySelector('.overlay2');
         const overlay3Element = elemento.querySelector('.overlay3');
+        const meus2Element = elemento.querySelector('.meus2');
+        const cursosElement = elemento.querySelector('.cursos');
+        const cursos2Element = elemento.querySelector('.cursos2');
 
         if (typed) {
             typed.destroy(); // Destrua a instância atual do Typed.js
@@ -352,6 +367,18 @@ function alterarIdioma(idioma) {
         if (overlay3Element) {
             overlay3Element.style.color = '#ffff'; // Define a cor desejada para o texto
             overlay3Element.textContent = textoTraduzido;
+        } 
+        if (meus2Element) {
+            meus2Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            meus2Element.textContent = textoTraduzido;
+        } 
+        if (cursosElement) {
+            cursosElement.style.color = '#00ff06'; // Define a cor desejada para o texto
+            cursosElement.textContent = textoTraduzido;
+        }
+        if (cursos2Element) {
+            cursos2Element.style.color = ''; // Define a cor desejada para o texto
+            cursos2Element.textContent = textoTraduzido;
         } 
     });
 }
