@@ -359,7 +359,7 @@ section.sobre .flex {
 
 section.projetos {
     padding: 80px 4%;
-    box-shadow: 0 0 30px 8px #ffffff03;
+    box-shadow: 0 0 30px 8px #ffffff03;/*AQUI tira a cor de separacao*/
 }
 
 .img-port {
