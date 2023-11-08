@@ -783,8 +783,8 @@ section.certificados{
 }
 
 .toggle {
-    width: 46px;
-    height: 20px;
+    width: 49px;
+    height: 23px;
     padding: 0px;
     border-radius: 30px;
     background-color: #00ff06;
@@ -795,8 +795,8 @@ section.certificados{
 }
   
   .toggle-ball {
-    width: 20px; /* Tamanho da bolinha */
-    height: 20px; /* Tamanho da bolinha */
+    width: 23px; /* Tamanho da bolinha */
+    height: 23px; /* Tamanho da bolinha */
     background-color: #000000; /* Cor da bolinha */
     border-radius: 50%; /* Forma arredondada da bolinha */
     position: absolute;
@@ -811,6 +811,7 @@ section.certificados{
     right: 0;
     margin: 14px; /* Remova margens */
     margin-top: 23px;
+    margin-right: 12px;
   }
   
 
