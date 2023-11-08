@@ -799,7 +799,7 @@ section.certificados{
     height: auto; /* Ajustar a altura automaticamente */
     justify-content: center; /* Centralizar os itens horizontalmente */
     margin-top: 4px; /* Reduzir a margem superior */
-    padding: 88px 22%;
+    padding: 100px 22%;
 }
 
 .toggle {
