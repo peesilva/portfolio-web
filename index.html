@@ -43,12 +43,13 @@
                     <li><a data-traducao="sobre" href="#sobre"><span class="sobre-mim">Sobre mim</span></a></li>
                     <li><a data-traducao="projetos" href="#projetos"><span class="projects">Projetos</span></a></li>
                     <li><a data-traducao="certificados" href="#certificados"><span class="certificados">Certificados</span></a></li>
+                    <li><a data-traducao="cursos2" href="#cursos"><span class="cursos2">Cursos</span></a></li>
                 </ul>
             </nav>
 
             <div class="btn-contato">
                 <a href="#formulario">
-                    <button data-traducao="contato"><span class="contact">Contato</span></button>
+                    <button data-traducao="contato"><span class="contact">Contato</span></button> 
                 </a>
             </div>
             <!--botao-change-lingua--><div class="toggle-language">
@@ -193,22 +194,47 @@
                 </div><!--flex-->
         </section><!--certificados-->  
 
+    
+    <section class="curso" id="cursos">
+            <div class="interface">
+            <h2 data-traducao="meus2"><span class="meus2">Meus</span><a data-traducao="cursos"><span class="cursos">Cursos</span></a></h2>
+        </div><!--interface-->
+        <div class="row">
+                <div class="img-ports1" style="background-image: url(images/tecnico.png);">
+                </div>
+                <div class="img-ports1" style="background-image: url(images/java.png);">
+                </div>
+                <div class="img-ports1" style="background-image: url(images/flutter.jpg);">
+                </div>
+                <div class="img-ports1" style="background-image: url(images/linux.png);">
+                </div>
+                <div class="img-ports1" style="background-image: url(images/communication.png);">
+                </div>
+                <div class="img-ports1" style="background-image: url(images/german.jpg);">
+                </div>
+        </div>
+        
+    </section><!--curso-->
+
+
+
         <section class="formulario" id="formulario">
             <div class="interface">
                 <h2 data-traducao="fale"><span class="fale">Fale</span><a data-traducao="comigo"><span class="comigo">Comigo</span></a></h2>
-                <form action="" class="formulario1" id="formulario1">
-                    <input class="seunome" type="text"  placeholder="Seu nome:" required/>
-                    <input type="email"  placeholder="Seu email:" required/>
-                    <input type="tel" placeholder="Seu celular:" />
-                    <textarea name="" placeholder="Sua mensagem" required></textarea>
-                    <div class="btn-enviar"><input type="submit" value="Enviar"></div><!--btn enviar-->
-                </form>
-		<!--<form action="" class="formulario2" id="formulario2">
+                <form action="" class="formulario" id="formulario1">
                     <input class="seunome" type="text"  placeholder="Your name:" required/>
                     <input type="email"  placeholder="Your email:" required/>
                     <input type="tel" placeholder="Your cell:" />
-                    <textarea name="" placeholder="Your message" required></textarea>
-                </form>-->
+                    <textarea name="" placeholder="Your message:" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="Send"></div>
+                </form>
+                <form action="" class="formulario" id="formulario2">
+                    <input class="seunome" type="text"  placeholder="Seu nome:" required/>
+                    <input type="email"  placeholder="Seu email:" required/>
+                    <input type="tel" placeholder="Seu celular:" />
+                    <textarea name="" placeholder="Sua mensagem:" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="Enviar"></div>
+                </form>
 
             </div><!--interface-->
 
@@ -216,7 +242,6 @@
     </main>
 
     <footer>
-        <div class="interface">
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
@@ -229,11 +254,9 @@
                     </div><!--btn-social-->
                 </div><!--flex-->
             </div><!--line-footer-->
-
+        </body>
             <div class="line-footer borda">
                 <p><i class="bi bi-envelope-fill"></i><a href="mailto:pedrosilva.profissional.ti@gmail.com">pedrosilva.profissional.ti@gmail.com</a></p>
             </div><!--line-footer-->
-        </div><!--interface-->
     </footer>
-</body>
 </html>

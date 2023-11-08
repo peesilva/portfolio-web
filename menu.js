@@ -104,11 +104,11 @@ const textos = {
         'en': 'I\'m Pedro Silva'
     },
     'paragrafo1': {
-        'pt': 'Olá, mundo! Meu nome é Pedro Silva, tenho 19 anos, sou formado em técnico de informática pelo Bento Quirino e estou cursando Sistemas de Informação na Unimetrocamp. Minhas habilidades em inglês (B2) e alemão (A1) contribuem positivamente para uma comunicação eficaz no mercado de trabalho.',
+        'pt': 'Olá, mundo! Meu nome é Pedro Silva, tenho 19 anos, sou formado em técnico de informática pelo Colégio Técnico Bento Quirino e estou cursando Sistemas de Informação na Unimetrocamp. Minhas habilidades em inglês (B2) e alemão (A1) contribuem positivamente para uma comunicação eficaz no mercado de trabalho.',
         'en': 'Hello, world! My name is Pedro Silva, I\'m 19 years old, I have a degree in computer science from Bento Quirino, and I\'m currently studying Information Systems at Unimetrocamp. My English (B2) and German (A1) skills contribute positively to effective communication in the workplace.'
     },
     'paragrafo2': {
-        'pt': 'Comecei a estagiar na Digiage em maio de 2022. Durante esse período, aprendi os conceitos Linux, boas práticas de desenvolvimento, resolução de problemas, atendimento de chamados com o cliente e melhorei minha comunicação assertiva. Após 8 meses de muita dedicação, recebi uma proposta para iniciar como Analista de Sistemas Júnior. Durante 9 meses como Analista de Sistemas Júnior, conquistei 3 certificados WSO2, (ferramenta de gerenciamento e desenvolvimento de APIs). Desenvolvi scripts para automatizar funcionalidades de software, aprimorei minhas análises em incidentes e realizei algumas trocas de certificados SSL nos clientes. Nos meus momentos livres, busquei expandir meus conhecimentos de desenvolvimento de sistemas, apaixonado pelo desenvolvimento backend, aprofundei meus conhecimentos em Java e Spring. Em agosto de 2023, iniciei na Digiage como Desenvolvedor Backend Júnior, onde estou atuando diretamente no desenvolvimento de novas funcionalidades em sistemas já existentes. Estou buscando expandir meus horizontes, adquirindo experiência prática com os serviços da AWS.',
+        'pt': 'Comecei a estagiar na Digiage em maio de 2022. Durante esse período, aprendi os conceitos Linux, boas práticas de desenvolvimento, resolução de problemas, atendimento de chamados com o cliente e melhorei minha comunicação assertiva. Após 8 meses de muita dedicação, recebi uma proposta para iniciar como Analista de Sistemas Júnior. Durante 9 meses como Analista de Sistemas Júnior, conquistei 3 certificados WSO2, (ferramenta de gerenciamento e desenvolvimento de APIs). Desenvolvi scripts para automatizar funcionalidades de software, aprimorei minhas análises em incidentes e realizei algumas trocas de certificados SSL nos clientes. Nos meus momentos livres, busquei expandir meus conhecimentos de desenvolvimento de sistemas. Apaixonado pelo desenvolvimento backend, aprofundei meus conhecimentos em Java e Spring. Em agosto de 2023, iniciei na Digiage como Desenvolvedor Backend Júnior, onde estou atuando diretamente no desenvolvimento de novas funcionalidades em sistemas já existentes. Busco sempre expandir minhas habilidades, estou adquirindo experiência prática com os serviços cloud da AWS.',
         'en': 'I started my internship at Digiage in May 2022. During this period, I learned Linux concepts, best development practices, problem-solving, customer support, and improved my assertive communication. After 8 months of dedication, I received an offer to start as a Junior Systems Analyst. During my 9 months as a Junior Systems Analyst, I earned 3 WSO2 certificates (a tool for managing and developing APIs). I developed scripts to automate software functionalities, enhanced my incident analysis skills, and conducted some SSL certificate replacements for clients. In my free time, I sought to expand my knowledge of system development. Being passionate about backend development, I deepened my knowledge of Java and Spring. In August 2023, I started at Digiage as a Junior Backend Developer, where I am directly involved in developing new features in existing systems. I am looking to broaden my horizons, gaining practical experience with AWS services.'
     },
     'paragrafo3': {
@@ -175,6 +175,18 @@ const textos = {
         'pt': ' Portfólio Web responsivo',
         'en': 'Responsive Web Portfolio'
     },
+    'meus2': {
+        'pt': 'Meus ',
+        'en': 'My '
+    },
+    'cursos': {
+        'pt': 'Cursos',
+        'en': 'Courses'
+    },
+    'cursos2': {
+        'pt': 'Cursos',
+        'en': 'Courses'
+    },
     // Adicione mais textos aqui
 };
 
@@ -217,6 +229,9 @@ function alterarIdioma(idioma) {
         const overlay1Element = elemento.querySelector('.overlay1');
         const overlay2Element = elemento.querySelector('.overlay2');
         const overlay3Element = elemento.querySelector('.overlay3');
+        const meus2Element = elemento.querySelector('.meus2');
+        const cursosElement = elemento.querySelector('.cursos');
+        const cursos2Element = elemento.querySelector('.cursos2');
 
         if (typed) {
             typed.destroy(); // Destrua a instância atual do Typed.js
@@ -353,6 +368,18 @@ function alterarIdioma(idioma) {
             overlay3Element.style.color = '#ffff'; // Define a cor desejada para o texto
             overlay3Element.textContent = textoTraduzido;
         } 
+        if (meus2Element) {
+            meus2Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            meus2Element.textContent = textoTraduzido;
+        } 
+        if (cursosElement) {
+            cursosElement.style.color = '#00ff06'; // Define a cor desejada para o texto
+            cursosElement.textContent = textoTraduzido;
+        }
+        if (cursos2Element) {
+            cursos2Element.style.color = ''; // Define a cor desejada para o texto
+            cursos2Element.textContent = textoTraduzido;
+        } 
     });
 }
 
@@ -401,4 +428,18 @@ document.addEventListener('DOMContentLoaded', function () {
             behavior: 'smooth'
         });
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const formulario2 = document.getElementById("formulario2");
+  const toggleLanguage = document.getElementById("language-switch");
+
+
+  toggleLanguage.addEventListener("click", function() {
+    if (formulario2.classList.contains("formulario-hidden")) {
+      formulario2.classList.remove("formulario-hidden");
+    } else {
+      formulario2.classList.add("formulario-hidden");
+    }
+  });
 });
