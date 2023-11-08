@@ -17,12 +17,13 @@
 
 .scroll-to-top i {
     font-size: 25px; /*tamanho do ícone*/
+    color: white;
 }
 
 /*botao*/
 
 .toggle-language {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     margin: 30px; /* Remova margens */
@@ -45,7 +46,7 @@
   }
   
   .toggle {
-    width: 60px;
+    width: 56px;
     height: 30px;
     padding: 0px;
     border-radius: 30px;
@@ -107,8 +108,9 @@ section.certificados{
     text-align: center;
     border-radius: 10px;
         padding: 30px; /* aqui ta dando margem do texto de dentro*/
-            margin: 10px auto;
-      
+        margin: 10px auto;
+        filter: brightness(0.76);
+    
             
     }
 
@@ -474,55 +476,76 @@ section.projetos .flex {
 
 /*Estilo do formulario de contato*/
 
-section.formulario {
-    padding: 80px 4%;
-}
+    form.formulario{
+        position: auto;
+    }
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 40px;
-}
+    .formulario-hidden {
+        opacity: 0;
+        pointer-events: none; /* Evite interações com formulários ocultos */
+    }
+    
+    section.formulario {
+        padding: 80px 4%;
+    }
 
-form input,
-form textarea {
-    width: 100%;
-    background-color: rgba(160, 147, 147, 0.225);
-    border: 0;
-    outline: 0;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: white;
-    font-size: 16px;
-}
+    form.formulario {
+        position: absolute;
+        left: 49.4%;
+        transform: translateX(-50%);
+        background: black;
+        max-width: 500px;
+        margin: 40px auto; /* Adicione margem superior e inferior para criar espaço entre os formulários */
+        padding: 10px; /* Adicione preenchimento para criar espaço entre os elementos do formulário */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 40px;
+      }
+      
 
-form textarea {
-    resize: none;
-    max-width: 500px;
-}
 
-form .btn-enviar {
-    margin-top: 15px;
-    text-align: center;
-}
+    form input,
+    form textarea {
+        width: 104%;
+        background-color: rgba(160, 147, 147, 0.225);
+        border: 0;
+        outline: 0;
+        padding: 20px 15px;
+        border-radius: 15px;
+        color: white;
+        font-size: 16px;
+    }
 
-form .btn-enviar input[type=submit] {
-    width: 120px;
-    background-color: #00ff06;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.5s;
-}
+    .btn-enviar{
+        position: auto;
+    }
+
+    form textarea {
+        resize: none;
+        max-width: 500px;
+    }
+
+    form .btn-enviar {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    form .btn-enviar input[type=submit] {
+        width: 120px;
+        background-color: #00ff06;
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.5s;
+    }
 
 /*Estilo rodape */
 
 footer {
-    padding: 5px 4%;
+    margin-top: 500px;
+    padding: 15px 3%;
     box-shadow: 0 0 30px 8px #ffffff03;
 }
 
@@ -541,7 +564,7 @@ footer .line-footer {
 
 footer .line-footer p i {
     color: #00ff06;
-    font-size: 22px;
+    font-size: 18px;
     padding-right: 5px;
 }
 
@@ -556,7 +579,7 @@ footer .line-footer p a {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
 
     /*classes gerais*/
     .flex {
@@ -741,5 +764,70 @@ section.certificados{
 }
 .certificados h2{
     padding: 40px;
+}
+
+.scroll-to-top i {
+    position: absolute;
+}
+
+.toggle-language {
+    position: absolute;
+}
+
+.img-ports1 {
+    height: auto; /* Ajustar a altura automaticamente */
+    justify-content: center; /* Centralizar os itens horizontalmente */
+    margin-top: 4px; /* Reduzir a margem superior */
+
+
+}
+
+.toggle {
+    width: 46px;
+    height: 20px;
+    padding: 0px;
+    border-radius: 30px;
+    background-color: #00ff06;
+    transition: all 0.2s ease 0s;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+  
+  .toggle-ball {
+    width: 20px; /* Tamanho da bolinha */
+    height: 20px; /* Tamanho da bolinha */
+    background-color: #000000; /* Cor da bolinha */
+    border-radius: 50%; /* Forma arredondada da bolinha */
+    position: absolute;
+    transition: transform 0.3s; /* Efeito de transição suave ao mover a bolinha */
+    border: 2px solid rgb(245, 245, 239);
+    box-shadow: rgba(0, 0, 0, 0.41) 0px 1px 6px 1px;
+  }
+
+  .toggle-language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 14px; /* Remova margens */
+    margin-top: 23px;
+  }
+  
+
+.toggle-language .lingua{
+    color: #ffffff;
+    margin: -1px;
+    text-align: center;
+   
+}
+
+/*botão de rolagem */
+.scroll-to-top {
+    right: 15px;
+}
+
+.logo{
+    margin-top: -35px;
+    margin-left: -10px;
 }
 }
