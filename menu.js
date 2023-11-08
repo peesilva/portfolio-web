@@ -443,3 +443,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+const toggleButton = document.getElementById('newbutton');
+const toggleLanguage = document.querySelector('.toggle-language');
+let isFixed = true;
+
+toggleButton.addEventListener('click', () => {
+    if (isFixed) {
+        toggleLanguage.style.position = 'fixed';
+        toggleButton.style.position = 'fixed'; // Adicione esta linha
+        isFixed = false;
+    } else {
+        toggleLanguage.style.position = 'absolute';
+        toggleButton.style.position = 'absolute'; // Adicione esta linha
+        isFixed = true;
+    }
+});
