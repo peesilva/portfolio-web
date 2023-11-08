@@ -20,10 +20,29 @@
     color: white;
 }
 
+#newbutton {
+    position: absolute;
+    top: 4px; /* Ajuste a margem superior de acordo com sua preferência */
+    right: 10px;
+    display: inline-block;
+    background-color: #0c0e0c;
+    border: none;
+    border-radius: 10px;
+    padding: 3px 8px; /* Ajuste o preenchimento conforme necessário */
+    color: white;
+    cursor: pointer;
+}
+
+#newbutton i {
+    margin-right: 1px; /* Adicione margem à direita do ícone (ajuste conforme necessário) */
+    color: #00ff06;
+    font-size: 18px;
+}
+
 /*botao*/
 
 .toggle-language {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     margin: 30px; /* Remova margens */
@@ -31,6 +50,7 @@
   
 
 .toggle-language .lingua{
+    pointer-events: none;
     color: #ffffff;
     margin: -1px;
     text-align: center;
@@ -46,6 +66,7 @@
   }
   
   .toggle {
+    cursor: pointer;
     width: 56px;
     height: 30px;
     padding: 0px;
@@ -486,12 +507,12 @@ section.projetos .flex {
     }
     
     section.formulario {
-        padding: 80px 4%;
+        padding: 0px 4%;
     }
 
     form.formulario {
         position: absolute;
-        left: 49.4%;
+        left: 49.8%;
         transform: translateX(-50%);
         background: black;
         max-width: 500px;
@@ -545,7 +566,7 @@ section.projetos .flex {
 
 footer {
     margin-top: 500px;
-    padding: 15px 3%;
+    padding: 30px 3%;
     box-shadow: 0 0 30px 8px #ffffff03;
 }
 
@@ -778,13 +799,12 @@ section.certificados{
     height: auto; /* Ajustar a altura automaticamente */
     justify-content: center; /* Centralizar os itens horizontalmente */
     margin-top: 4px; /* Reduzir a margem superior */
-
-
+    padding: 88px 22%;
 }
 
 .toggle {
-    width: 46px;
-    height: 20px;
+    width: 49px;
+    height: 23px;
     padding: 0px;
     border-radius: 30px;
     background-color: #00ff06;
@@ -795,8 +815,8 @@ section.certificados{
 }
   
   .toggle-ball {
-    width: 20px; /* Tamanho da bolinha */
-    height: 20px; /* Tamanho da bolinha */
+    width: 23px; /* Tamanho da bolinha */
+    height: 23px; /* Tamanho da bolinha */
     background-color: #000000; /* Cor da bolinha */
     border-radius: 50%; /* Forma arredondada da bolinha */
     position: absolute;
@@ -811,6 +831,7 @@ section.certificados{
     right: 0;
     margin: 14px; /* Remova margens */
     margin-top: 23px;
+    margin-right: 12px;
   }
   
 
@@ -829,5 +850,13 @@ section.certificados{
 .logo{
     margin-top: -35px;
     margin-left: -10px;
+}
+
+section.formulario {
+    padding: 0px 4%;
+}
+
+#newbutton {
+    display: none; /* Ocultar o botão em dispositivos responsivos com largura máxima de 768px */
 }
 }
