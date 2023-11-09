@@ -21,7 +21,7 @@
 }
 
 #newbutton {
-    position: absolute;
+    position: fixed;
     top: 4px; /* Ajuste a margem superior de acordo com sua preferência */
     right: 10px;
     display: inline-block;
@@ -42,7 +42,7 @@
 /*botao*/
 
 .toggle-language {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     margin: 30px; /* Remova margens */
