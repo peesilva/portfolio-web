@@ -529,7 +529,7 @@ section.projetos .flex {
 
     form input,
     form textarea {
-        width: 104%;
+        width: 100%;
         background-color: rgba(160, 147, 147, 0.225);
         border: 0;
         outline: 0;
