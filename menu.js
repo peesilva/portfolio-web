@@ -148,16 +148,16 @@ const textos = {
         'en': 'to me'
     },
     'versionamento': {
-        'pt': 'Versionamento',
-        'en': 'Versioning'
+        'pt': 'Testes Unitários',
+        'en': 'Unit Tests'
     },
     'textver': {
-        'pt': 'Versionamento de código usando Git',
-        'en': 'Code versioning using Git'
+        'pt': 'Experiência com criação e implementação de testes unitários utilizando JUnit, Mockito e TestNG',
+        'en': 'Experience in creating and implementing unit tests using JUnit, Mockito and TestNG '
     },
     'textcloud': {
-        'pt': 'Conhecimento técnico e prático com serviços AWS, entre eles, EC2, Route 53, S3, Elastic Beanstalk, SES...',
-        'en': 'Technical and practical knowledge with AWS services, including EC2, Route 53, S3, Elastic Beanstalk, SES...'
+        'pt': 'Conhecimento técnico e prático com serviços AWS, entre eles, EC2, Route 53, S3, Elastic Beanstalk, SES, etc.',
+        'en': 'Technical and practical knowledge with AWS services, including EC2, Route 53, S3, Elastic Beanstalk, SES, etc.'
     },
     'textjava': {
         'pt': 'Desenvolvimento Java Spring Conhecimento sólido no desenvolvimento de APIs SOAP e REST',
