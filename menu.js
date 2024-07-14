@@ -46,7 +46,7 @@ document.getElementById('sobre').addEventListener('click', function(event) {
 });
 
 document.getElementById("emailBtn").addEventListener("click", function() {
-    window.location.href = "mailto:pedrosilva.profissional.ti@gmail.com";
+    window.location.href = "mailto:arbeit.pedro.silva@gmail.com";
 });
 
 document.getElementById("linkedinBtn").addEventListener("click", function() {
@@ -79,9 +79,17 @@ const textos = {
         'pt': 'Sobre mim',
         'en': 'About me'
     },
+    'myartigos': {
+        'pt': 'Artigos',
+        'en': 'Articles'
+    },
     'projetos': {
         'pt': 'Projetos',
         'en': 'Projects'
+    },
+    'artigos': {
+        'pt': 'Artigos',
+        'en': 'Articles'
     },
     'certificados': {
         'pt': 'Certificados',
@@ -104,8 +112,8 @@ const textos = {
         'en': 'I\'m Pedro Silva'
     },
     'paragrafo1': {
-        'pt': 'Olá, mundo! Meu nome é Pedro Silva, tenho 19 anos, sou formado em técnico de informática pelo Colégio Técnico Bento Quirino e estou cursando Sistemas de Informação na Unimetrocamp. Minhas habilidades em inglês (B2) e alemão (A1) contribuem positivamente para uma comunicação eficaz no mercado de trabalho.',
-        'en': 'Hello, world! My name is Pedro Silva, I\'m 19 years old, I have a degree in computer science from Bento Quirino, and I\'m currently studying Information Systems at Unimetrocamp. My English (B2) and German (A1) skills contribute positively to effective communication in the workplace.'
+        'pt': 'Olá, mundo! Meu nome é Pedro Silva, tenho 20 anos, sou formado em técnico de informática pelo Colégio Técnico Bento Quirino e estou cursando Sistemas de Informação na Unimetrocamp. Minhas habilidades em inglês (B1) e alemão (A1) contribuem positivamente para uma comunicação eficaz no mercado de trabalho.',
+        'en': 'Hello, world! My name is Pedro Silva, I\'m 20 years old, I have a degree in computer science from Bento Quirino, and I\'m currently studying Information Systems at Unimetrocamp. My English (B1) and German (A1) skills contribute positively to effective communication in the workplace.'
     },
     'paragrafo2': {
         'pt': 'Comecei a estagiar na Digiage em maio de 2022. Durante esse período, aprendi os conceitos Linux, boas práticas de desenvolvimento, resolução de problemas, atendimento de chamados com o cliente e melhorei minha comunicação assertiva. Após 8 meses de muita dedicação, recebi uma proposta para iniciar como Analista de Sistemas Júnior. Durante 9 meses como Analista de Sistemas Júnior, conquistei 3 certificados WSO2, (ferramenta de gerenciamento e desenvolvimento de APIs). Desenvolvi scripts para automatizar funcionalidades de software, aprimorei minhas análises em incidentes e realizei algumas trocas de certificados SSL nos clientes. Nos meus momentos livres, busquei expandir meus conhecimentos de desenvolvimento de sistemas. Apaixonado pelo desenvolvimento backend, aprofundei meus conhecimentos em Java e Spring. Em agosto de 2023, iniciei na Digiage como Desenvolvedor Backend Júnior, onde estou atuando diretamente no desenvolvimento de novas funcionalidades em sistemas já existentes. Busco sempre expandir minhas habilidades, estou adquirindo experiência prática com os serviços cloud da AWS.',
@@ -179,6 +187,14 @@ const textos = {
         'pt': 'Meus ',
         'en': 'My '
     },
+    'meus3': {
+        'pt': 'Meus ',
+        'en': 'My '
+    },
+    'post1': {
+        'pt': 'API de Upload de Arquivo na AWS S3',
+        'en': 'File Upload API on AWS S3'
+    },
     'cursos': {
         'pt': 'Cursos',
         'en': 'Courses'
@@ -204,6 +220,7 @@ function alterarIdioma(idioma) {
         const inicioElement = elemento.querySelector('.inicio');
         const especialidadesElement = elemento.querySelector('.especialidades');
         const sobremimElement = elemento.querySelector('.sobre-mim');
+        const myartigosElement = elemento.querySelector('.my-artigos');
         const projectsElement = elemento.querySelector('.projects');
         const certificadosElement = elemento.querySelector('.certificados');
         const contactElement = elemento.querySelector('.contact');
@@ -215,6 +232,7 @@ function alterarIdioma(idioma) {
         const mynameElement = elemento.querySelector('.myname');
         const meusElement = elemento.querySelector('.meus');
         const projetosElement = elemento.querySelector('.projetos');
+        const artigosElement = elemento.querySelector('.artigos');
         const minhas1Element = elemento.querySelector('.minhas1');
         const especialidades1Element = elemento.querySelector('.especialidades1');
         const minhas2Element = elemento.querySelector('.minhas2');
@@ -230,6 +248,8 @@ function alterarIdioma(idioma) {
         const overlay2Element = elemento.querySelector('.overlay2');
         const overlay3Element = elemento.querySelector('.overlay3');
         const meus2Element = elemento.querySelector('.meus2');
+        const meus3Element = elemento.querySelector('.meus3');
+        const post1Element = elemento.querySelector('.post1');
         const cursosElement = elemento.querySelector('.cursos');
         const cursos2Element = elemento.querySelector('.cursos2');
 
@@ -268,9 +288,17 @@ function alterarIdioma(idioma) {
             especialidadesElement.style.color = ''; // Define a cor desejada para o texto
             especialidadesElement.textContent = textoTraduzido;
         }
+        if (myartigosElement) {
+            myartigosElement.style.color = ''; // Define a cor desejada para o texto
+            myartigosElement.textContent = textoTraduzido;
+        }
         if (sobremimElement) {
             sobremimElement.style.color = ''; // Define a cor desejada para o texto
             sobremimElement.textContent = textoTraduzido;
+        }
+        if (projectsElement) {
+            projectsElement.style.color = ''; // Define a cor desejada para o texto
+            projectsElement.textContent = textoTraduzido;
         }
         if (projectsElement) {
             projectsElement.style.color = ''; // Define a cor desejada para o texto
@@ -315,6 +343,10 @@ function alterarIdioma(idioma) {
         if (projetosElement) {
             projetosElement.style.color = '#00ff06'; // Define a cor desejada para o texto
             projetosElement.textContent = textoTraduzido;
+        }
+        if (artigosElement) {
+            artigosElement.style.color = '#00ff06'; // Define a cor desejada para o texto
+            artigosElement.textContent = textoTraduzido;
         }
         if (minhas1Element) {
             minhas1Element.style.color = '#ffff'; // Define a cor desejada para o texto
@@ -371,6 +403,14 @@ function alterarIdioma(idioma) {
         if (meus2Element) {
             meus2Element.style.color = '#ffff'; // Define a cor desejada para o texto
             meus2Element.textContent = textoTraduzido;
+        } 
+        if (meus3Element) {
+            meus3Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            meus3Element.textContent = textoTraduzido;
+        } 
+        if (post1Element) {
+            post1Element.style.color = '#ffff'; // Define a cor desejada para o texto
+            post1Element.textContent = textoTraduzido;
         } 
         if (cursosElement) {
             cursosElement.style.color = '#00ff06'; // Define a cor desejada para o texto

@@ -269,6 +269,8 @@ h2[data-traducao="minhas2"] ,
 h2[data-traducao="certificacoes1"] ,
 h2[data-traducao="fale"] ,
 h2[data-traducao="meus2"] ,
+h2[data-traducao="meus3"] ,
+h2[data-traducao="artigos"] ,
 h2[data-traducao="cursos"] ,
 h2[data-traducao="comigo"] ,
 h2[data-traducao=projetos] {
@@ -286,6 +288,8 @@ h2[data-traducao="certificacoes"] .certificacoes span,
 h2[data-traducao="fale"] .fale span,
 h2[data-traducao="comigo"] .comigo span,
 h2[data-traducao="meus2"] .meus2 span,
+h2[data-traducao="meus3"] .meus3 span,
+h2[data-traducao="artigos"] .artigos span,
 h2[data-traducao="cursos"] .cursos span,
 h2[data-traducao="projetos"] .projetos span {
     font-size: 28px;
@@ -326,7 +330,50 @@ header nav ul {
 
 header nav.menu-desktop ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 26px;
+}
+
+/* Estilo dos posts na aba artigo */
+.posts {
+    position: relative;
+    width: 552px;
+    height: 241px;
+    overflow: hidden;
+    margin: 20px auto; /* Centraliza o elemento horizontalmente */
+    border: 1px solid #ddd; /* Bordas suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.posts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.posts:hover img {
+    transform: scale(1.1);
+}
+
+.posts .text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.posts:hover .text-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.posts:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo do topo do site */
@@ -600,7 +647,8 @@ footer .line-footer p a {
 }
 
 
-@media screen and (max-width: 1100px) {
+/* Mobile (telefones) */
+@media screen and (max-width: 767px) {
 
     /*classes gerais*/
     .flex {
@@ -639,6 +687,7 @@ footer .line-footer p a {
 
     .topo-do-site .img-topo-site img {
         width: 100%;
+        display: none;
     }
 
     /*Especialidades*/
@@ -781,10 +830,10 @@ section.certificados.flexs {
 
 
 section.certificados{
-    padding: 40px;
+    padding: 30px;
 }
 .certificados h2{
-    padding: 40px;
+    padding: 30px;
 }
 
 .scroll-to-top i {
@@ -799,7 +848,7 @@ section.certificados{
     height: auto; /* Ajustar a altura automaticamente */
     justify-content: center; /* Centralizar os itens horizontalmente */
     margin-top: 4px; /* Reduzir a margem superior */
-    padding: 100px 22%;
+    padding: 80x 19%;
 }
 
 .toggle {
@@ -859,4 +908,45 @@ section.formulario {
 #newbutton {
     display: none; /* Ocultar o botão em dispositivos responsivos com largura máxima de 768px */
 }
+}
+
+/* Tablet (dispositivos médios) */
+@media screen and (min-width: 414px) and (max-width: 896px) {
+
+section.certificados{
+    padding: 25px;
+}
+.certificados h2{
+    padding: 30px;
+}
+
+.scroll-to-top i {
+    position: absolute;
+}
+
+.toggle-language {
+    position: absolute;
+}
+
+.img-ports1 {
+    height: auto; /* Ajustar a altura automaticamente */
+    justify-content: center; /* Centralizar os itens horizontalmente */
+    margin-top: 5px; /* Reduzir a margem superior */
+    padding: 100x 22%;
+}
+}
+/* iphone 15 artigo*/
+@media (max-width: 393px) {
+    .posts {
+        width: 360px; 
+        height: auto; 
+    }
+
+    .posts .text-overlay {
+        font-size: 13px; 
+        padding: 9px; 
+    }
+}
+.posts {
+    border: none;
 }
