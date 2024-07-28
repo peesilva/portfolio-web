@@ -64,7 +64,7 @@ const textos = {
         'en': 'This portfolio seems to be from a frontend developer, but no, I\'m a backend developer'
     },
     'typing': {
-        'pt': 'Seja bem vindo ao meu portfólio web, conheca um pouquinho sobre mim...',
+        'pt': 'Seja bem vindo ao meu portfólio web, conheça um pouquinho sobre mim...',
         'en': 'Welcome to my web portfolio, get to know a little about me...'
         },
     'inicio': {
@@ -99,9 +99,9 @@ const textos = {
         'pt': 'Contato',
         'en': 'Contact'
     },
-    'entreEmContato': {
-        'pt': 'Entre em contato',
-        'en': 'Get in touch'
+    'baixeCurriculo': {
+        'pt': 'Baixe meu currículo',
+        'en': 'Download Resume'
     },
     'sobreTitulo': {
         'pt': 'Olá, mundo!',
@@ -207,7 +207,7 @@ const textos = {
 };
 
 // Variável para rastrear o idioma atual
-let idiomaAtual = 'pt'; // Português como padrão
+let idiomaAtual = localStorage.getItem('idiomaAtual') || 'pt'; // Português como padrão
 
 function alterarIdioma(idioma) {
     idiomaAtual = idioma;
@@ -224,7 +224,7 @@ function alterarIdioma(idioma) {
         const projectsElement = elemento.querySelector('.projects');
         const certificadosElement = elemento.querySelector('.certificados');
         const contactElement = elemento.querySelector('.contact');
-        const entreEmContatoElement = elemento.querySelector('.entreEmContato');
+        const baixeCurriculoElement = elemento.querySelector('.baixeCurriculo');
         const parumElement = elemento.querySelector('.par1');
         const pardoisElement = elemento.querySelector('.par2');
         const partresElement = elemento.querySelector('.par3');
@@ -312,9 +312,9 @@ function alterarIdioma(idioma) {
             contactElement.style.color = ''; // Define a cor desejada para o texto
             contactElement.textContent = textoTraduzido;
         }
-        if (entreEmContatoElement) {
-            entreEmContatoElement.style.color = ''; // Define a cor desejada para o texto
-            entreEmContatoElement.textContent = textoTraduzido;
+        if (baixeCurriculoElement) {
+            baixeCurriculoElement.style.color = ''; // Define a cor desejada para o texto
+            baixeCurriculoElement.textContent = textoTraduzido;
         }
         if (parumElement) {
             parumElement.style.color = ''; // Define a cor desejada para o texto
@@ -438,8 +438,15 @@ alterarIdioma(idiomaAtual);
 // Função para alternar o idioma com base no estado do checkbox
 function toggleIdioma() {
     idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt'; // Alterna entre 'pt' e 'en'
+    localStorage.setItem('idiomaAtual', idiomaAtual); // Salva o estado do idioma
     alterarIdioma(idiomaAtual);
 }
+
+// Inicialize os elementos com o idioma padrão
+alterarIdioma(idiomaAtual);
+
+// Ajustar o estado do checkbox com base no idioma atual
+document.getElementById('language-switch').checked = idiomaAtual === 'en';
 
 // Vincule a função toggleIdioma à mudança de estado do checkbox
 document.getElementById('language-switch').addEventListener('change', toggleIdioma);
@@ -498,4 +505,18 @@ toggleButton.addEventListener('click', () => {
         toggleButton.style.position = 'fixed'; // Adicione esta linha
         isFixed = true;
     }
+});
+
+document.querySelector('button[data-traducao="baixeCurriculo"]').addEventListener('click', function() {
+    const fileUrl = 'https://curriculo-s3.s3.amazonaws.com/pedro-silva-curriculo.pdf';
+    const fileName = 'pedro-silva-curriculo.pdf';
+    
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = fileName;
+    
+    document.body.appendChild(a);
+    a.click();
+    
+    document.body.removeChild(a);
 });

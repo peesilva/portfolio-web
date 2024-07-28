@@ -243,6 +243,17 @@ body {
     transition: .2s;
 }
 
+.btn-contato1 button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff06;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
 button:hover,
 form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #20cb23;
@@ -950,3 +961,9 @@ section.certificados{
 .posts {
     border: none;
 }
+
+.btn-contato1 button {
+        padding: 10px 20px; /* Reduzir o preenchimento para telas menores */
+        font-size: 14px; /* Ajustar o tamanho da fonte para melhor legibilidade */
+        font-weight: 600; /* Garantir que o peso da fonte permaneça consistente */
+    }
