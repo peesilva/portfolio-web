@@ -707,6 +707,21 @@ footer .line-footer p a {
     section.especialidades {
         padding: 80px 8%;
     }
+    .especialidades .especialidades-box {
+        padding: 20px;
+        margin-top: 23px;
+    }
+
+    .especialidades .especialidades-box h3 {
+        font-size: 24px;
+    }
+    /*na linha 710 a 717 mudou o estilo no responsivo, nao eh necessario so deixa mais bonito o quadrinho*/
+
+    .especialidades .especialidades-box.active,
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.504);
+}
 
  /* Sobre*/
  section.sobre {

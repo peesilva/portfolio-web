@@ -160,16 +160,16 @@ const textos = {
         'en': 'Unit Tests'
     },
     'textver': {
-        'pt': 'Experiência com criação e implementação de testes unitários utilizando JUnit, Mockito e TestNG',
-        'en': 'Experience in creating and implementing unit tests using JUnit, Mockito and TestNG '
+        'pt': 'Experiência com criação e implementação de testes unitários utilizando JUnit e Mockito',
+        'en': 'Experience in creating and implementing unit tests using JUnit and Mockito'
     },
     'textcloud': {
-        'pt': 'Conhecimento técnico e prático com serviços AWS, entre eles, EC2, Route 53, S3, Elastic Beanstalk, SES, etc.',
-        'en': 'Technical and practical knowledge with AWS services, including EC2, Route 53, S3, Elastic Beanstalk, SES, etc.'
+        'pt': 'Conhecimento técnico e prático com serviços AWS, entre eles, EC2, S3, Lambda, SES, Route 53, etc',
+        'en': 'Technical and practical knowledge with AWS services, including EC2, S3, Lambda, SES, Route 53, etc'
     },
     'textjava': {
-        'pt': 'Desenvolvimento Java Spring Conhecimento sólido no desenvolvimento de APIs SOAP e REST',
-        'en': 'Java Spring Development Solid knowledge in the development of SOAP and REST APIs'
+        'pt': 'Conhecimento sólido no desenvolvimento de APIs e sistemas usando Java e Framework Spring',
+        'en': 'Solid knowledge in developing APIs and systems using Java and Framework Spring'
     },
     'overlay1': {
         'pt': 'CRUD Java usando banco h2',
@@ -519,4 +519,22 @@ document.querySelector('button[data-traducao="baixeCurriculo"]').addEventListene
     a.click();
     
     document.body.removeChild(a);
+});
+
+document.querySelectorAll('.img-ports').forEach(item => {
+    item.addEventListener('click', () => {
+        window.location.href = item.getAttribute('data-link');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Verifica se o dispositivo suporta toque
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+
+    if (isTouchDevice) {
+        // Adiciona a classe 'active' para todos os elementos .especialidades-box
+        document.querySelectorAll('.especialidades .especialidades-box').forEach(item => {
+            item.classList.add('active');
+        });
+    }
 });
