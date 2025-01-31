@@ -508,7 +508,7 @@ toggleButton.addEventListener('click', () => {
 });
 
 document.querySelector('button[data-traducao="baixeCurriculo"]').addEventListener('click', function() {
-    const fileUrl = 'https://curriculo-s3.s3.amazonaws.com/pedro-silva-curr%C3%ADculo.pdf';
+    const fileUrl = 'https://curriculo-s3.s3.us-east-1.amazonaws.com/pedro-silva-curr%C3%ADculo.pdf';
     const fileName = 'pedro-silva-currículo.pdf';
     
     const a = document.createElement('a');
